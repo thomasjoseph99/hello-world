@@ -14,5 +14,11 @@ pipeline{
 				echo 'deploy...'
 			}
 		}
+		
+		stage ('example'){
+			steps{
+				echo "Running ${env.BUILD_ID} on ${JENKINS_URL}"
+			}
+		}
 	}
 }
